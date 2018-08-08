@@ -1,0 +1,29 @@
+# Enable rewrite engine and route requests to framework
+#RewriteEngine On
+
+# Some servers require you to specify the `RewriteBase` directive
+# In such cases, it should be the path (relative to the document root)
+# containing this .htaccess file
+#
+# RewriteBase /
+
+
+#RewriteEngine on
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ /index.php?path=$1 [NC,L,QSA]
+
+#RewriteEngine on
+#RewriteBase /indigenous_tour/
+## If a directory or a file exists, use it directly
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+## Otherwise forward it to index.php
+#RewriteRule . /indigenous_tour/index.php
+
+RewriteEngine On
+RewriteBase /indigenous_tour/
+#RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]

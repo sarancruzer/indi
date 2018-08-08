@@ -1,0 +1,23 @@
+{
+  "config": {
+    "github-protocols": [
+      "https,ssh"
+    ]
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.org"
+    }
+  },
+   "require": {
+        "doctrine/orm": "*",
+    "phpmailer/phpmailer": "^6.0",
+    "firebase/php-jwt": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    }
+}
